@@ -1,41 +1,111 @@
-<canvas id="myCanvas" width="200" height="100"></canvas>
-<script>
-    var canvas = document.getElementById("myCanvas")
-    var ctx = canvas.getContext("2d");
-    ctx.fillStyle = "red"
-    ctx.fillRect(0, 0, 150, 30);
-    ctx.fillStyle = "white"
-    ctx.fillRect(0, 30, 150, 30);
-    ctx.fillStyle = "red"
-    ctx.fillRect(0, 60, 75, 30);
-    ctx.fillStyle = "green"
-    ctx.fillRect(75, 60, 75, 30);
-    ctx.fillStyle = "red"
-    ctx.fillRect(30, 30, 30, 30);
-    ctx.fillStyle = "white"
-    ctx.fillRect(30, 40, 30, 10);
-    ctx.fillStyle = "red"
-    ctx.fillRect(90, 30, 30, 30);
-    ctx.fillStyle = "white"
-    ctx.fillRect(104, 30, 1, 30);
-    ctx.fillStyle = "white"
-    ctx.fillRect(90, 30, 15, 4);
-    ctx.fillStyle = "white"
-    ctx.fillRect(90, 38, 15, 4);
-    ctx.fillStyle = "white"
-    ctx.fillRect(90, 46, 15, 4);
-    ctx.fillStyle = "white"
-    ctx.fillRect(90, 54, 15, 4);
-    ctx.moveTo(105, 60);
-    ctx.fillStyle = "green"
-    ctx.lineTo(113, 55);
-    ctx.lineTo(121, 60);
-    ctx.lineTo(121, 60);
-    ctx.closePath();
-    ctx.fill();
-    // ctx.lineTo(60, 30);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIOGRAPHY WEBPAGE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    // ctx.beginPath();
-    // ctx.arc(80, 20, 20, 0, 10.10);
-    // ctx.stroke();
-</script>
+        <!--SEC1-->
+
+<div class = "face">
+    <img src="logo.png" style = "width: 50px; height: 50px;" class = "logo">
+    <nav>
+        <ul class = "next">
+            <li><a href = "#About">About</a></li>
+            <li><a href = "#Interests">Interests</a></li>
+            <li><a href = "#Hobbies">Hobby</a></li>
+        </ul>
+    </nav>
+    <a href = "#" class = "some"></a>
+</div>
+<div class="main-slider">  
+    <img src="game.jpeg">
+   
+</div>
+
+        <!--MID SEC-->
+
+<div class = "mid">
+    <h1 id = "about">About</h1>
+    <div class = "text">
+        <h2>Hi, my name is Myrza. I'm 17 and was born in 2005 in the city of Osh, that's on the south part of our country. 
+            There are 5 family members including me. My father's name is Ulan, mother's name is Elzada. 
+            Me - the oldest son, my little brother - Aktan and my little sister - Sofia. 
+            Right now I'm studying at the Ala-Too college as a 2-year student.</h2>
+    </div>
+    <img src = "me.jpg" class = "img">
+</div>
+
+<div class = "pen"><h1 id = "interests">Interests</h1></div>
+    
+        <!--INTERESTS E.T.C.-->
+
+        <div class="int" onclick="next()">
+            <div class="contex">
+                <div class="contex-image"> <img src="" id="image" ></div> 
+            
+                <button onclick="c()" class="point">next</button>
+                <button onclick="b()" class="point2">back</button>
+            
+                    <div class="text-of">
+                        <h1 id="main">Interests</h1> 
+                        <h3 id="text">My interests are: psychology, arts, animating and history </h3>
+                    </div>  
+            </div>
+        </div> 
+        
+            <script>
+                function c() {
+                    document.getElementById("main").innerHTML="Books";
+                    document.getElementById("image").src="book.jpeg";
+                    document.getElementById("text").innerHTML="I rarely read. Psychological stuff is usually what I read.";
+                }
+                </script>
+            <script>
+                    function b() {
+                        document.getElementById('main').innerHTML="Free time stuff";
+                        document.getElementById("image").src="info.png";
+                        document.getElementById("text").innerHTML="To be honest I spend a lot of time on video games, of course not all the time, but most of my free time is being spent on video games.";
+                    }
+                </script>
+        
+        
+        <div class="int" onclick="next()">
+            <div class="contex2">
+                <div> <img src="draw.webp" id="image2" class="contex-image2" ></div> 
+                    <button onclick="d()" class="point">next</button>
+                    <button onclick="f()" class="point2">back</button>
+                        <div class="text-of2">
+        
+                            <h1 id="main2">Hobby</h1> 
+                            <h3 id="text2">My hobbies are drawing and playing piano. I also love to try animating, but I'm not good at this yet.</h3>
+                         </div>  
+            </div>
+        </div> 
+        
+            <script>
+            function d() {
+                document.getElementById("main2").innerHTML="Relatives";
+                document.getElementById("image2").src="rel.jpeg";
+                document.getElementById("text2").innerHTML="I'm an introvert so you can barely see me talking. My relatives know that and don't bother me too much.";
+            }
+                </script>
+            <script>
+            function f(){
+                document.getElementById("main2").innerHTML="Drawing";
+                document.getElementById("image2").src="art.jpeg"
+                document.getElementById("text2").innerHTML="Another thing I spent most of my time is drawing. It really helps you feel relieved. Most often I draw some characters but I also love draving buildings and landscapes."
+            }
+                </script>
+        
+        
+        <!-- Last of the page -->
+        
+
+
+</body>
+</html>
